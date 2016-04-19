@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 
 # sudo xcodebuild -license
+xcodebuild --install
 
-which pip >/dev/null 2>&1
+which brew >/dev/null 2>&1
 if [ $? -ne 0 ];
 then
-  echo "not found command pip"
-  echo "install pip"
-  sudo easy_install pip
+  echo "not found command brew"
+  echo "install brew"
+  ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 fi
 
 which ansible >/dev/null 2>&1
@@ -15,5 +16,5 @@ if [ $? -ne 0 ];
 then
   echo "not found command ansible"
   echo "install ansible"
-  sudo pip install ansible
+  brew install ansible
 fi
