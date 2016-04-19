@@ -88,6 +88,7 @@
     - filezilla
     - flashlight
     - freemind
+    # hosts editor
     - gas-mask
     - google-chrome
     - google-japanese-ime
