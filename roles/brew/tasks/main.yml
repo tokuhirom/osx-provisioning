@@ -1,0 +1,111 @@
+---
+# update to latest
+- homebrew: update_homebrew=yes 
+
+- name: install {{item}}
+  homebrew: name={{item}} state=present
+  with_items:
+    - ansible
+    - ant
+    - bash
+    - bash-completion
+    - bash-git-prompt
+    - boot2docker
+    - brew-cask
+    - bvi
+    - nodenv
+    - node-build
+    - cheat
+    - cmake
+    - coreutils
+    - cpanminus
+    - csshx
+    - curl
+    - dash
+    - docker
+    - git
+    - go
+    - gradle
+    - graphviz
+    - groovy
+    - groovyserv
+    - htop-osx
+    - hub
+    - icu4c
+    - imagemagick
+    - jpeg
+    - jq
+    - lv
+    - mas
+    - maven
+    - memcached
+    - mercurial
+    - mutt
+    - mysql
+    - ncftp
+    - nettle
+    - ngrep
+    - nkf
+    - nmap
+    - node
+    - openssl
+    - peco
+    - perl-build
+    - plantuml
+    - plenv
+    - rbenv
+    - readline
+    - rmtrash
+    - ruby-build
+    - sbt
+    - scala
+    - sphinx-doc
+    - springboot
+    - sqlite
+    - tcptraceroute
+    - the_silver_searcher
+    - tmux
+    - tree
+    - vim
+    - w3m
+    - wget
+    - xz
+    - zsh
+    - zsh-completions
+    - zsh-syntax-highlighting
+
+- name: install {{item}}
+  homebrew_cask: name={{item}} state=present
+  environment:
+    HOMEBREW_CASK_OPTS: --appdir=/Applications
+  with_items:
+    - alfred
+    - atom
+    - caffeine
+    - dash
+    - dockertoolbox
+    - evernote
+    - filezilla
+    - flashlight
+    - freemind
+    - gas-mask
+    - google-chrome
+    - google-japanese-ime
+    - hipchat
+    - iterm2
+    - java
+    - karabiner
+    - skitch
+    - skype
+    - slack
+    - slate
+    - virtualbox
+    - visual-studio-code
+    - kindle
+    - visualvm
+
+- command: cpanm -n CPAN::Uploader
+
+# upgrade homebrew tasks to latest
+- name: upgrade homebrew
+  homebrew: update_homebrew=yes upgrade_all=yes

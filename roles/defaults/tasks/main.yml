@@ -1,0 +1,13 @@
+---
+# tap to click
+- command: defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -int 1
+- command: defaults write -g com.apple.trackpad.scaling -float 1
+
+# InitialKeyRepeat
+- command: defaults write -g InitialKeyRepeat -int 13
+- command: defaults write -g KeyRepeat -int 3
+
+# finder
+- command : defaults write com.apple.finder AppleShowAllFiles true
+- command : defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+

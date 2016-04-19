@@ -1,0 +1,18 @@
+---
+- name: install appstore applications
+  command: mas install "{{ item.id }}"
+  with_items:
+    - name: BetterSnapTool
+      id: 417375580
+    - name: Twitter
+      id: 409789998
+    - name: Bee
+      id: 726099620
+    - name: LINE
+      id: 539883307
+    - name: Wunderlist
+      id: 410628904
+    - name: Pixelmator
+      id: 407963104
+
+

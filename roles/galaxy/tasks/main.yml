@@ -1,0 +1,4 @@
+---
+- name: run ansible galaxy
+  local_action: command ansible-galaxy install -r requirements.yml --ignore-errors
+

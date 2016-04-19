@@ -1,0 +1,14 @@
+---
+- stat: path=~/.nodenv/versions/5.10.1/
+  register: st
+- name: install perl
+  command: nodenv install 5.10.1
+  when: st.stat.exists is not defined
+- name: enable version
+  command: nodenv global 5.10.1
+- name: rehash
+  command: nodenv rehash
+- name: insall babel
+  npm: name=babel global=yes
+- name: insall eslint
+  npm: name=eslint global=yes

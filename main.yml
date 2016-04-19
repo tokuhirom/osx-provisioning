@@ -1,0 +1,15 @@
+# xcode-select --install
+# ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+# brew install python
+# brew install ansible
+# 
+# ansible-playbook -c localhost main.yml
+- hosts: localhost
+  roles:
+    - easy_install
+    - nodenv
+    - bash
+    - galaxy
+    - defaults
+    - brew
+    - plenv

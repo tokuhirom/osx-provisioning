@@ -1,0 +1,14 @@
+---
+- stat: path=~/.plenv/versions/5.22.1/
+  register: st
+- name: install perl
+  command: plenv install 5.22.1
+  when: st.stat.exists is not defined
+- name: enable version
+  command: plenv global 5.22.1
+- name: install cpanm
+  command: plenv install-cpanm
+- name: rehash
+  command: plenv rehash
+- name: install modules
+  command: ~/.plenv/shims/cpanm --with-recommends --with-suggests --with-develop --with-all-features -n Minilla CPAN::Uploader Amon2
