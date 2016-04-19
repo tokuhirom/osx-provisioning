@@ -1,0 +1,2 @@
+---
+- command: vim '+PlugInstall 1' '+qall'
