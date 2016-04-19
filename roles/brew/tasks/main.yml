@@ -104,8 +104,6 @@
     - kindle
     - visualvm
 
-- command: cpanm -n CPAN::Uploader
-
 # upgrade homebrew tasks to latest
 - name: upgrade homebrew
   homebrew: update_homebrew=yes upgrade_all=yes
