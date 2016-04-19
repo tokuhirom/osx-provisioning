@@ -3,7 +3,7 @@
 # brew install python
 # brew install ansible
 # 
-# ansible-playbook -c localhost main.yml
+# ansible-playbook -c localhost main.yml -K
 - hosts: localhost
   roles:
     - easy_install
