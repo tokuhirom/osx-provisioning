@@ -8,7 +8,7 @@
   roles:
     - easy_install
     - nodenv
-    - bash
+    - shell
     - galaxy
     - defaults
     - brew
