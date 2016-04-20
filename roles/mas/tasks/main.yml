@@ -4,8 +4,8 @@
   with_items:
     - name: BetterSnapTool
       id: 417375580
-    - name: Twitter
-      id: 409789998
+#   - name: Twitter
+#     id: 409789998
     - name: Bee
       id: 726099620
     - name: LINE
