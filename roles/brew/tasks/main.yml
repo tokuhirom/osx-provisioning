@@ -104,6 +104,7 @@
     - visual-studio-code
     - kindle
     - visualvm
+    - twitterrific
 
 # upgrade homebrew tasks to latest
 - name: upgrade homebrew
