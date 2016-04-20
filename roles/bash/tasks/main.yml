@@ -3,6 +3,10 @@
   lineinfile: dest=/etc/shells regexp='^' state=present line='/usr/local/bin/bash'
   become: true
   become_user: root
-- user: name=tokuhirom shell=/usr/local/bin/bash
+- name: Add bash to /etc/shells
+  lineinfile: dest=/etc/shells regexp='^' state=present line='/usr/local/bin/zsh'
+  become: true
+  become_user: root
+- user: name=tokuhirom shell=/usr/local/bin/zsh
   become: true
   become_user: root
